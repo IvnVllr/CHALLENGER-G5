@@ -7,12 +7,18 @@
     font-family: 'Inter', sans-serif;
 }
 
+.imagen-alura{
+    position: absolute;
+    left: 8.4%;
+    top: 4%;
+}
+
 .texto{
     color: #0A3871;
     font-family: 'Inter', sans-serif;
     position: absolute;
-    width: 577px;
-    height: 48px;
+    width: 42%;
+    height: 37%;
     left: 20%;
     top: 20%;
     font-size: 32px;
@@ -33,3 +39,107 @@
     border: none;
 }
 
+/* ZONA BOTONES */
+
+.precaucion{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 20%;
+    top: 80%;
+    width: 25%;
+    margin: 0 0 2% 0;
+}
+
+.precaucion p{
+    font-size: 12px;
+    color: #495057;
+    font-weight: 400;
+    margin: 0 0 0 2.5%;
+}
+
+.botones{
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    width: 80%;
+    height: 12%;
+    padding: 1% 0;
+    left: 20%;
+    top: 82%;
+}
+
+.boton-encriptar{
+    align-items: center;
+    border: none;
+    border-radius: 24px;
+    background-color: #0a3871;
+    color: #FFFFFF;
+    width: 25%;
+    padding: 2%;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+    margin: 0 2% 0 0;
+}
+
+.boton-desencriptar{
+    box-sizing: border-box;
+    align-items: center;
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    color: #0A3871;
+    background-color: #D8DFE8;
+    width: 25%;
+    padding: 2%;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+}
+
+.caja-mensaje{
+    display: flex;
+    position: absolute;
+    width: 20%;
+    height: 91%;
+    background: #FFFFFF;
+    left: 72%;
+    top: 4%;
+    box-sizing: border-box;
+    box-shadow: 0 9px 25px -16px #000000;
+    border-radius: 32px;
+}
+
+.muñeco{
+    display: flex;
+    position: absolute;
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+    top: 23%;
+    left: 5%;
+}
+
+.muñeco h2{
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    color: #343A40;
+    line-height: 120%;
+    margin: 5% 0 5% 0;
+}
+
+.muñeco p{
+    line-height: 150%;
+    font-size: 16px;
+    font-weight: 400;
+    color: #495057;
+}
+
+/*LO DEJO POR ACA. ME VOY A DORMIR XD, GL PARA VOS DEL FUTURO. FALTA POCO VOS PODES B)*/

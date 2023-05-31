@@ -1,41 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Encriptador de Texto</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+        <script src="script.js"></script>
     </head>
     <body>
         <section class="contenedor">
             <div class="escribir-texto">
-                <img src="imagenes/Vector.png">
+                <img src="imagenes/Vector.png" class="imagen-alura">
                 <textarea class="texto" name="texto" id="texto" cols="30" rows="10" placeholder="Ingrese su texto aquí" required></textarea>
             </div>
-            <section class="caja-mensaje">
-                    <div class="muñeco">
-                        <img id="muñeco" src="imagenes/Muñeco.png">
-                        <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
-                        <p id="parrafo-mensaje">Ingresa el texto que desees encriptar o desencriptar.</p>
-                    </div>
-                    <div class="mensaje">
-                        <textarea class="mensaje-encriptado" name="mensaje-encriptado" id="mensaje-encriptado" cols="30" rows="10"></textarea>
-                        <input type="button" value="Copiar" id="copiar" class="copiar">
-                    </div>
-            </section>
             <div class="precaucion">
                 <img src="imagenes/exclamacion.png">
                 <p>Solo letras minúsculas y sin acentos.</p>
             </div>
             <div class="botones">
-                    <button class="btn-encriptar" type="button" onclick="encriptar()">Encriptar</button>
-                    <button class="btn-desencriptar" type="button" onclick="desencriptar()">Desencriptar</button>
+                <button class="boton-encriptar" type="button" onclick="encriptar()">Encriptar</button>
+                <button class="boton-desencriptar" type="button" onclick="desencriptar()">Desencriptar</button>
             </div>
+        <section class="caja-mensaje">
+            <div class="muñeco">
+                <img id="muñeco" src="imagenes/Muñeco.png">
+                <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+                <p id="parrafo-mensaje">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <!-- <div class="mensaje">
+                <textarea class="mensaje-encriptado" name="mensaje-encriptado" id="mensaje-encriptado" cols="30" rows="10"></textarea>
+                <input type="button" value="Copiar" id="copiar" class="copiar">
+            </div> -->
+        </section>
         </section>
     </body>
 </html>
