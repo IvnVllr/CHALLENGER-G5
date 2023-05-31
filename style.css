@@ -2,8 +2,7 @@
     width: 100vw;
     height: 100vh;
     margin: 0 auto;
-    position: relative;
-    background: #E5E5E5;
+    background: #F3F5FC;
     font-family: 'Inter', sans-serif;
 }
 
@@ -12,6 +11,8 @@
     left: 8.4%;
     top: 4%;
 }
+
+/*TEXTO ENCRIPTADOR*/
 
 .texto{
     color: #0A3871;
@@ -71,6 +72,7 @@
 
 .boton-encriptar{
     align-items: center;
+    justify-content: center;
     border: none;
     border-radius: 24px;
     background-color: #0a3871;
@@ -89,10 +91,11 @@
 .boton-desencriptar{
     box-sizing: border-box;
     align-items: center;
+    justify-content: center;
     border: 1px solid #0a3871;
     border-radius: 24px;
     color: #0A3871;
-    background-color: #D8DFE8;
+    background-color: #F3F5FC;
     width: 25%;
     padding: 2%;
     gap: 8px;
@@ -103,6 +106,8 @@
     text-align: center;
 }
 
+/* CAJA DE TEXTO SIN NADA */
+
 .caja-mensaje{
     display: flex;
     position: absolute;
@@ -112,11 +117,11 @@
     left: 72%;
     top: 4%;
     box-sizing: border-box;
-    box-shadow: 0 9px 25px -16px #000000;
+    box-shadow: 0 24px 32px -8px rgba(0,0,0,8%);
     border-radius: 32px;
 }
 
-.muñeco{
+.muñeco-texto{
     display: flex;
     position: absolute;
     width: 90%;
@@ -126,7 +131,7 @@
     left: 5%;
 }
 
-.muñeco h2{
+.muñeco-texto h2{
     font-weight: bold;
     font-size: 24px;
     text-align: center;
@@ -135,11 +140,174 @@
     margin: 5% 0 5% 0;
 }
 
-.muñeco p{
+.muñeco-texto p{
     line-height: 150%;
     font-size: 16px;
     font-weight: 400;
     color: #495057;
 }
 
-/*LO DEJO POR ACA. ME VOY A DORMIR XD, GL PARA VOS DEL FUTURO. FALTA POCO VOS PODES B)*/
+/*PARA PANTALLA DE TELEFONO-400PX*/
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    
+
+    /*TEXTO ENCRIPTADOR*/
+
+    .imagen-alura{
+        left: 5%;
+        top: 5%;
+    }
+
+    .texto{
+        width: 90%;
+        left: 5%;
+        top: 15%;
+        height: 29%;
+    }
+
+
+    /* BOTONES */
+
+    .precaucion{
+        top: 45.4%;
+        width: 90%;
+        left: 5%;
+    }
+
+    .botones{
+        top: 48%;
+        width: 90%;
+        flex-direction: column;
+        gap: 22.5px;
+        left: 5%;
+    }
+
+    .boton-encriptar, .boton-desencriptar{
+        width: 100%;
+        padding: 6%;
+    }
+
+    /* CAJA DE TEXTO SIN NADA */
+
+    .caja-mensaje{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        width: 85%;
+        height: 25%;
+        left: 8%;
+        top: 70%;
+    }
+
+    .foto-muñeco{
+        display: none;
+    }
+
+    .muñeco-texto{
+        top: auto;
+        gap: 10px;
+    }
+
+    .muñeco-texto h2{
+        margin: auto 0;
+    }
+}
+
+/* PARA TABLET */
+
+@media screen and (min-width:700px) and (max-width: 1024px) and (orientation: portrait) {
+
+    /*TEXTO ENCRIPTADOR*/
+
+    .imagen-alura{
+        left: 5%;
+        top: 7%;
+    }
+
+    .texto{
+        left: 5%;
+        top: 22.5%;
+        width: 90%;
+        height: 32%;
+    }
+
+    /* BOTONES */
+
+    .precaucion{
+        top: 62.4%;
+        width: 90%;
+        left: 5%;
+    }
+
+    .botones{
+        top: 65%;
+        width: 90%;
+        gap: 18px;
+        left: 5%;
+    }
+
+    .boton-encriptar, .boton-desencriptar{
+        width: 100%;
+        padding: 4%;
+    }
+
+     /* CAJA DE TEXTO SIN NADA */
+
+    .caja-mensaje{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        width: 90%;
+        height: 15.3%;
+        left: 5%;
+        top: 80%;
+    }
+
+    .foto-muñeco{
+        display: none;
+    }
+
+    .muñeco-texto{
+        top: auto;
+        gap: 10px;
+    }
+
+    .muñeco-texto h2{
+        margin: auto 0;
+    }
+
+}
+
+/* PARA CELULARES EN ROTACION HORIZONTAL */
+
+@media screen and (min-width:700px) and (max-width: 1024px) and (orientation: landscape) {
+   
+    .texto{
+        height: 50%;
+        width: 41.45%;
+    }
+
+    .precaucion {
+        width: 50%;
+        top: 79%;
+    }
+
+    .boton-encriptar, .boton-desencriptar{
+        border-radius: 15px;
+    }
+
+    .caja-mensaje{
+        left: 70%;
+        width: 25%;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .muñeco-texto{
+        top: auto;
+    }
+
+}
