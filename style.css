@@ -86,6 +86,7 @@
     line-height: 19px;
     text-align: center;
     margin: 0 2% 0 0;
+    transition: 1s all;
 }
 
 .boton-desencriptar{
@@ -104,6 +105,12 @@
     font-weight: 400;
     line-height: 19px;
     text-align: center;
+    transition: 1s all;
+}
+
+.boton-encriptar:hover, .boton-desencriptar:hover{
+    cursor: pointer;
+
 }
 
 /* CAJA DE TEXTO SIN NADA */
@@ -129,6 +136,7 @@
     text-align: center;
     top: 23%;
     left: 5%;
+    transition: 1s all;
 }
 
 .muñeco-texto h2{
@@ -138,6 +146,7 @@
     color: #343A40;
     line-height: 120%;
     margin: 5% 0 5% 0;
+    transition: 1s all;
 }
 
 .muñeco-texto p{
@@ -145,6 +154,7 @@
     font-size: 16px;
     font-weight: 400;
     color: #495057;
+    transition: 1s all;
 }
 
 .mensaje{
@@ -176,6 +186,7 @@
     font-size: 24px;
     line-height: 150%;
     color: #495057;
+    transition: 1s all;
 }
 
 .mensaje input {
@@ -197,6 +208,17 @@
     font-size: 16px;
     font-weight: 400;
     background: none;
+    transition: 1s all;
+}
+
+.mensaje input:hover{
+    cursor: pointer;
+}
+
+.mensaje input:active{
+    border: 1px solid #357a38;
+    background: #449e48;
+    color: white;
 }
 
 

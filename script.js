@@ -1,3 +1,14 @@
+// IGNORAR MAYUSCULAS Y ACENTUACIÓN
+function convertirMinusculas(){
+    let textarea = document.getElementById("texto");
+    textarea.value = textarea.value.toLowerCase();
+};
+
+function ignorarAcentuacion(){
+    let textarea = document.getElementById("texto");
+    let textoSinAcentos = textarea.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    textarea.value = textoSinAcentos;
+};
 
 //COPIAR
 
@@ -9,6 +20,15 @@ function copiar (){
         textoEncriptado.select();
         document.execCommand("copy");
         botonCopiar.value="Copiado ✔"
+        botonCopiar.style.background="#449e48";
+        botonCopiar.style.color="white";
+        botonCopiar.style.border="1px solid #3db143";
+        setTimeout(() => {
+            botonCopiar.value="Copiar"
+            botonCopiar.style.background="";
+            botonCopiar.style.color="";
+            botonCopiar.style.border="";
+          }, 5000);
     });
 };
 
