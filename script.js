@@ -28,7 +28,7 @@ function copiar (){
             botonCopiar.style.background="";
             botonCopiar.style.color="";
             botonCopiar.style.border="";
-          }, 5000);
+          }, 1000);
     });
 };
 
@@ -39,6 +39,7 @@ function encriptar(){
     var tituloMensaje = document.getElementById("titulo-mensaje");
     var parafoMensaje = document.getElementById("parrafo-mensaje");
     var muñeco = document.getElementById("muñeco");
+    var textoEncriptar = document.getElementById("mensaje-en-des");
     var botonCopiar = document.getElementById("boton-copiar");
     
     var textoEncriptado = texto
@@ -50,13 +51,13 @@ function encriptar(){
 
     if (texto.length != 0){
         document.getElementById("mensaje-en-des").value = textoEncriptado;
-        document.getElementById("mensaje-en-des").style.visibility="visible";
-        document.getElementById("boton-copiar").style.visibility="visible";
+        textoEncriptar.style.visibility="visible";
+        botonCopiar.style.visibility="visible";
         tituloMensaje.textContent = "";
         parafoMensaje.textContent = "";
         muñeco.style.visibility="hidden";
     } else {
-        alert("hola");
+        alert("Debes ingresar un texto primero");
     };
 };
 
@@ -67,6 +68,7 @@ function desencriptar(){
     var tituloMensaje = document.getElementById("titulo-mensaje");
     var parafoMensaje = document.getElementById("parrafo-mensaje");
     var muñeco = document.getElementById("muñeco");
+    var textoEncriptar = document.getElementById("mensaje-en-des");
     var botonCopiar = document.getElementById("boton-copiar");
 
     const textoDesencriptado = texto
@@ -78,13 +80,60 @@ function desencriptar(){
 
     if (texto.length != 0){
         document.getElementById("mensaje-en-des").value = textoDesencriptado;
-        document.getElementById("mensaje-en-des").value.visibility=visible;
+        textoEncriptar.visibility="visible";
+        botonCopiar.visibility="visible";
         botonCopiar.style.display="";
         tituloMensaje.textContent = "";
         parafoMensaje.textContent = "";
         muñeco.style.visibility="hidden";
     } else {
-        alert("hola");
+        alert("Debes ingresar un texto primero");
     };
 };
 
+//cambiar de color Botones encrip y descr
+
+function cambiarcolor(){
+    const botonEncriptar = document.getElementById("boton-encriptar");
+    botonEncriptar.addEventListener("click", e =>{
+        botonEncriptar.value = "Encriptado ✔"
+        botonEncriptar.style.background="#449e48";
+        botonEncriptar.style.color="white";
+        botonEncriptar.style.border="1px solid #3db143";
+        setTimeout(() => {
+            botonEncriptar.value="Encriptar"
+            botonEncriptar.style.background="";
+            botonEncriptar.style.color="";
+            botonEncriptar.style.border="";
+          }, 1000);
+    });
+
+    const botonDesencriptar = document.getElementById("boton-desencriptar");
+    botonDesencriptar.addEventListener("click", e =>{
+        botonDesencriptar.value = "Desencriptado ✔"
+        botonDesencriptar.style.background="#449e48";
+        botonDesencriptar.style.color="white";
+        botonDesencriptar.style.border="1px solid #3db143";
+        setTimeout(() => {
+            botonDesencriptar.value="Desencriptar"
+            botonDesencriptar.style.background="";
+            botonDesencriptar.style.color="";
+            botonDesencriptar.style.border="";
+          }, 1000);
+    });
+}
+
+//FUNCION HACER QUE EL TEXTAREA AUMENTE SI SOBREPASA
+// function ajustarAltura(){
+//     const texto = document.getElementById("texto");
+//     texto.style.height = "auto";
+//     texto.style.height = texto.scrollHeight + "px";
+
+//     const textoEncript = document.getElementById("mensaje-en-des");
+//     textoEncript.style.height = "auto"
+//     textoEncript.style.height = textoEncript.scrollHeight + "px";
+
+//     const contenedor = document.querySelector(".contenedor");
+//     contenedor.style.height = contenedor.scrollHeight + "px";
+
+// }
