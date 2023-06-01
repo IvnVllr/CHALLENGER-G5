@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,12 @@
         <title>Encriptador de Texto</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style_dark.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
         <script src="script.js"></script>
+        <script src="style_dark.js"></script>
     </head>
     <body>
         <section class="contenedor">
@@ -26,16 +28,16 @@
                 <button class="boton-encriptar" type="button" onclick="encriptar()">Encriptar</button>
                 <button class="boton-desencriptar" type="button" onclick="desencriptar()">Desencriptar</button>
             </div>
-        <section class="caja-mensaje">
-            <div class="muñeco-texto">
+            <section class="caja-mensaje">
+           <div class="muñeco-texto">
                 <img class="foto-muñeco" id="muñeco" src="imagenes/Muñeco.png">
                 <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
                 <p id="parrafo-mensaje">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
-            <!-- <div class="mensaje">
-                <textarea class="mensaje-encriptado" name="mensaje-encriptado" id="mensaje-encriptado" cols="30" rows="10"></textarea>
-                <input type="button" value="Copiar" id="copiar" class="copiar">
-            </div> -->
+            <div class="mensaje">
+                <textarea name="mensaje-en-des" id="mensaje-en-des" cols="30" rows="10" readonly></textarea>
+                <input type="button" value="Copiar" id="boton-copiar" onclick="copiar()">
+            </div>
         </section>
         </section>
     </body>

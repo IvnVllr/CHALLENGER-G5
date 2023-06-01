@@ -147,10 +147,62 @@
     color: #495057;
 }
 
-/*PARA PANTALLA DE TELEFONO-400PX*/
+.mensaje{
+    position: absolute;
+    width: 100%;
+    height: 93%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    top: 2%;
+    vertical-align: top;
+}
+
+.mensaje textarea{
+    visibility: hidden;
+    font-family: 'Inter', sans-serif;
+    position: absolute;
+    top: 2%;
+    width: 80%;
+    height: 90%;
+    border: none;
+    outline: none;
+    background: none;
+    resize: none;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: #495057;
+}
+
+.mensaje input {
+    visibility: hidden;
+    font-family: 'Inter', sans-serif;
+    width: 80%;
+    padding: 8%;
+    top: 91.7%;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 18px;
+    vertical-align: top;
+    color: #0A3871;
+    position: absolute;
+    line-height: 19px;
+    font-size: 16px;
+    font-weight: 400;
+    background: none;
+}
+
+
+/*REDIMENSION PARA PANTALLA DE TELEFONO-400PX*/
 
 @media only screen and (min-width: 320px) and (max-width: 480px){
-    
 
     /*TEXTO ENCRIPTADOR*/
 
@@ -212,9 +264,26 @@
     .muñeco-texto h2{
         margin: auto 0;
     }
+
+    /*DONDE IRA EL TEXTO ENCRIP-DESCRIPTADO*/
+
+    .mensaje{
+        height: 50%;
+    }
+
+    .mensaje textarea{
+        visibility: hidden;
+        top: auto;
+    }
+
+    .mensaje input{
+        visibility: hidden;
+        margin: 7% 0;
+    }
+
 }
 
-/* PARA TABLET */
+/* REDIMENSION PARA TABLET */
 
 @media screen and (min-width:700px) and (max-width: 1024px) and (orientation: portrait) {
 
@@ -277,20 +346,47 @@
         margin: auto 0;
     }
 
+     /*DONDE IRA EL TEXTO ENCRIP-DESCRIPTADO*/
+
+    .mensaje{
+        width: 90%;
+        left: 5%;
+    }
+
+    .mensaje textarea{
+        visibility: hidden;
+        height: 40%;
+        width: 100%;
+        top: 5%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mensaje input{
+        visibility: hidden;
+        padding: 4%;
+        width: 100%;
+        top: 50%;
+        margin: 1% 0;
+    }
 }
 
-/* PARA CELULARES EN ROTACION HORIZONTAL */
+/* REDIMENSION PARA CELULARES EN ROTACION HORIZONTAL */
 
 @media screen and (min-width:700px) and (max-width: 1024px) and (orientation: landscape) {
    
     .texto{
-        height: 50%;
+        height: 45%;
         width: 41.45%;
     }
 
     .precaucion {
         width: 50%;
-        top: 79%;
+        top: 70%;
+    }
+
+    .botones{
+        top: 75%;
     }
 
     .boton-encriptar, .boton-desencriptar{
@@ -308,6 +404,24 @@
 
     .muñeco-texto{
         top: auto;
+    }
+
+    .mensaje{
+        height: 80%;
+        width: 85%;
+    }
+
+    .mensaje textarea{
+        visibility: hidden;
+        width: 100%;
+    }
+
+    .mensaje input{
+        visibility: hidden;
+        margin: 10% 0;
+        padding: 7.5%;
+        width: 100%;
+        border-radius: 15px;
     }
 
 }
